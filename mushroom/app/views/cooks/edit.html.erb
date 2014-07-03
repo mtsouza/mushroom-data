@@ -6,7 +6,7 @@
 <%= form_for @cook do |f| %>
 	<p>
 		<%= f.label :date %> <br/>
-		<%= f.text_field :date %>
+		<%= f.date_field :date %>
 	</p>
 
 	<p>
@@ -39,6 +39,10 @@
 		<%= f.text_area :spawn %>
 	</p>
 
+	<p>
+		<%= f.label :notes %> <br/>
+		<%= f.text_area :notes %>
+	</p>
 
 	<p>
 		<%= f.submit "Update Cook" %>

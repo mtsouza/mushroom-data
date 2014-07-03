@@ -13,15 +13,9 @@
 	<p style="background-color: yellow;"><%= value %></p>
 <% end %>
 
- 	<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+ 
 
-       
-
-
-	<header><h1><%= link_to 'Mushroom Project', '/' %></h1></header>
-
-	<p class="navbar-text pull-right">
+	<p class="navbar-text pull-right" style="float: right">
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -31,11 +25,16 @@
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 
+<header><%= image_tag "logo.png" %></header>
 
-<nav>
-  <%= link_to 'Cook', '/cooks' %> |
-  <%= link_to 'Harvest', '/harvests' %>
-</nav>
+<div style="nav">
+	<ul>
+		<li><%= link_to 'Cook Data', '/cooks' %></li> 
+		<li><%= link_to 'Harvest Data', '/harvests' %></li> |
+		<li><%= link_to 'NEW Cook', '/cooks/new' %></li> 
+		<li><%= link_to 'NEW Harvest', '/harvests/new' %></li>
+	</ul>
+</div>
 
 
 <!-- setting up devise -->
@@ -46,6 +45,7 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
+<br style="clear:both" />
 
 <%= yield %>
 

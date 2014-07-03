@@ -19,3 +19,5 @@
 <small>Updated: <%= @cook.created_at %></small>
 
  <p><%= link_to "Edit", edit_cook_path(@cook) %><p>
+
+ <p><%= link_to "Delete", @cook, :method => :delete %></p>

@@ -39,7 +39,7 @@ class CooksController < ApplicationController
 	def destroy
 		@cook = Cook.find(params[:id])
     	@cook.destroy
-    	redirect_to cooks_path, :notice => "Your post has been deleted"
+    	redirect_to cooks_path, :notice => "Your cook has been deleted"
 	end
 
 	def load_resource
@@ -48,8 +48,8 @@ class CooksController < ApplicationController
 
 
   	def cook_params
-    allow = [:bagid, :soaktime, :cooktime, :substrate, :spawn]
-    params.require(:date).permit(allow)
+    allow = [:date, :bagid, :soaktime, :cooktime, :substrate, :spawn]
+    params.require(:cook).permit(allow)
   	end
 
 end

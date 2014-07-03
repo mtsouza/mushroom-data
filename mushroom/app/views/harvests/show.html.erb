@@ -5,19 +5,20 @@
 <%= @harvest.date.strftime("%Y") %>
 </h1>
 
-<p>Harvest Date <%= @harvest.harvest %></p>
+<p>Harvest Date: <%= @harvest.harvest %></p>
 
 <p>Harvest ID: <%= @harvest.id %></p>
 <p>Bag ID: <%= @harvest.bagid %></p>
 <p>Date: <%= @harvest.date %></p>
- 
-
-
 
 <p>Weight (oz): <%= @harvest.weight %></p>
 <p>Comment: <%= @harvest.comment %></p>
 
 <p>Updated: <%= @harvest.updated_at %></p>
 
+ <p><%= link_to "Edit", edit_harvest_path(@harvest) %><p>
+
+<!--  <p><%= link_to "Delete", @harvest, :method => :delete %></p>
+ -->
 
 
