@@ -1,5 +1,7 @@
 class CooksController < ApplicationController
 	
+before_filter :load_resource, only: [:show, :edit]
+
 	def index
 		@cooks = Cook.all
 	end

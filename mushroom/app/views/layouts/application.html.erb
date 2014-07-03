@@ -5,47 +5,53 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
 
-
-<% flash.each do |key, value| %>
-	<p style="background-color: yellow;"><%= value %></p>
-<% end %>
+<!-- Settings for flash messages -->
+	<% flash.each do |key, value| %>
+		<p style="background-color: yellow;"><%= value %></p>
+	<% end %>
 
  
-
+<!-- User information -->
 	<p class="navbar-text pull-right" style="float: right">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-
-<header><%= image_tag "logo.png" %></header>
-
-<div style="nav">
-	<ul>
-		<li><%= link_to 'Cook Data', '/cooks' %></li> 
-		<li><%= link_to 'Harvest Data', '/harvests' %></li> |
-		<li><%= link_to 'NEW Cook', '/cooks/new' %></li> 
-		<li><%= link_to 'NEW Harvest', '/harvests/new' %></li>
-	</ul>
-</div>
+		<% if user_signed_in? %>
+		  Logged in as <strong><%= current_user.email %></strong>.
+		  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+		  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+		<% else %>
+		  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+		  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+	<% end %>
 
 
-<!-- setting up devise -->
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+<!-- Brooklyn Grange Mushroom Logo -->
+	<header><%= image_tag "logo.png" %></header>
+
+
+<!-- Navigation -->
+	<div style="nav">
+		<ul>
+			<li><%= link_to 'Cook Data', '/cooks' %></li> 
+			<li><%= link_to 'Harvest Data', '/harvests' %></li> |
+			<li><%= link_to 'NEW Cook', '/cooks/new' %></li> 
+			<li><%= link_to 'NEW Harvest', '/harvests/new' %></li>
+		</ul>
+	</div>
+
+
+<!-- Setting up devise -->
+	<% if notice %>
+	  <p class="alert alert-success"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+	  <p class="alert alert-danger"><%= alert %></p>
+	<% end %>
 
 <br style="clear:both" />
+
 
 <%= yield %>
 
