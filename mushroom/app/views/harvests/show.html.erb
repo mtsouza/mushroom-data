@@ -1,0 +1,23 @@
+ <!-- B is full month name, e day of month, and Y is year  -->
+<h1>
+<%= @harvest.date.strftime("%B") %>
+<%= @harvest.date.strftime("%e") %>,
+<%= @harvest.date.strftime("%Y") %>
+</h1>
+
+<p>Harvest Date <%= @harvest.harvest %></p>
+
+<p>Harvest ID: <%= @harvest.id %></p>
+<p>Bag ID: <%= @harvest.bagid %></p>
+<p>Date: <%= @harvest.date %></p>
+ 
+
+
+
+<p>Weight (oz): <%= @harvest.weight %></p>
+<p>Comment: <%= @harvest.comment %></p>
+
+<p>Updated: <%= @harvest.updated_at %></p>
+
+
+

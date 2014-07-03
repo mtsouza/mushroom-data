@@ -1,0 +1,21 @@
+
+<h1>
+
+<%= @cook.date.strftime("%B") %>
+<%= @cook.date.strftime("%e") %>,
+<%= @cook.date.strftime("%Y") %>
+
+</h1>
+<h2>Cook ID <%= @cook.id %> </h2>
+<p><%= @cook.date %></p>
+<p>Bag ID: <%= @cook.bagid %></p>
+<p>Method: <%= @cook.method %></p>
+<p>Soak Time: <%= @cook.soaktime %></p>
+<p>Cook Time: <%= @cook.cooktime %></p>
+<p>Substrate (oz): <%= @cook.substrate %></p>
+<p>Spawn (oz): <%= @cook.spawn %></p>
+<p>Notes: <%= @cook.notes %></p>
+
+<small>Updated: <%= @cook.created_at %></small>
+
+ <p><%= link_to "Edit", edit_cook_path(@cook) %><p>

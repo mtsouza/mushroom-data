@@ -1,0 +1,48 @@
+<h1>Edit</h1>
+
+</h1>
+
+
+<%= form_for @cook do |f| %>
+	<p>
+		<%= f.label :date %> <br/>
+		<%= f.text_field :date %>
+	</p>
+
+	<p>
+		<%= f.label :bagid %> <br/>
+		<%= f.text_area :bagid %>
+	</p>
+
+	<p>
+		<%= f.label :method %> <br/>
+		<%= f.text_area :method %>
+	</p>
+
+	<p>
+		<%= f.label :soaktime %> <br/>
+		<%= f.text_area :soaktime %>
+	</p>
+
+	<p>
+		<%= f.label :cooktime %> <br/>
+		<%= f.text_area :cooktime %>
+	</p>
+
+	<p>
+		<%= f.label :substrate %> <br/>
+		<%= f.text_area :substrate %>
+	</p>
+
+	<p>
+		<%= f.label :spawn %> <br/>
+		<%= f.text_area :spawn %>
+	</p>
+
+
+	<p>
+		<%= f.submit "Update Cook" %>
+	</p>
+
+	
+<% end %>

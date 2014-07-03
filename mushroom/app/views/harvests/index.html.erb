@@ -1,0 +1,8 @@
+<h1>Harvest Data</h1>
+
+<% @harvests.each do |h| %>
+
+	<h2><%= link_to h.date, h %></h2>
+	<hr />
+<% end %>
+

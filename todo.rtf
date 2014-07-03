@@ -1,0 +1,75 @@
+add data as from google doc 
+- add weather data 
+- redo tables somehow???
+- add CSV input option 
+
+- can't get confirm to work in index.html.erb POSTS
+
+- add footer redirect to home
+
+- just do data 
+- pull in weather api for outside humidity and temp 
+
+WEATHER API DATA
+wunderground: 5f91a6e8e3e7def5
+11216
+w_api = Wunderground.new("5f91a6e8e3e7def5")
+here = w_api.conditions_for("autoip")
+here["current_observation"]["temp_f"]
+here["current_observation"]["relative_humidity"]
+
+before_then = w_api.history_for("20130501", "11216")
+
+** tempi is for F and tempm is for C / hum is humidity 
+
+before_then["history"]["observations"].first["hum"]
+
+before_then["history"]["observations"].first["temp"]
+
+
+
+
+fields 
+
+index
+shows
+doashbaord 
+
+use d3js gem
+devise gem 
+weather gem
+each cook will have page and check boxes generate table (all bags, temp, humidity)
+ recorded temp vs read temp 
+
+ - view by dates
+
+ - gem to generate reports??
+
+http://publicapis.com/
+
+	
+bkeepers/dotenv
+
+ ---------
+
+
+Cook.create( date: "	7/3/13	", bagid: 	1	, method: "	boil	", soaktime:	60	, cooktime: 	30	, substrate:	16	, spawn:		, notes: "	FAIL - no holes	"														
+
+
+AG SQUARED 
+
+2007
+both in grad school plant breeding 
+data revolution 
+looking at big data for agriculture 
+talking to lots of farmers '97 value in having digital tools 
+- tool kit for farmers - record info and then give big data back to farmers 
+
+going forward: extending reach within farming community by working with companies who works with many farms '97 aggregators 
+- empower people who work from companies on behalf of farmers 
+
+- staying in touch 
+- 
+
+phone gap: 
+- phone js  
